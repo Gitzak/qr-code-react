@@ -9,11 +9,11 @@ const Navigation = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Online QR Code Generator</Navbar.Brand>
+        <Navbar.Brand href="/">Online QR Code Generator</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home"><FontAwesomeIcon className="me-2" icon={faGithub} /> Github Repo</Nav.Link>
+            <Nav.Link target="_blank" href="https://github.com/Gitzak/qr-code-react"><FontAwesomeIcon className="me-2" icon={faGithub} /> Github Repo</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
