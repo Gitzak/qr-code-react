@@ -1,53 +1,82 @@
-# QR Code Generator - React App
+# QR Craft
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![React Bootstrap](https://img.shields.io/badge/React_Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![react-qr-code](https://img.shields.io/badge/react--qr--code-000000?style=for-the-badge)
+A clean, single-page QR code generator built with **React**, **Bootstrap**, and **react-qr-code**. Turn a link or a short message into a QR code and download it as a PNG, directly in your browser.
 
-This is a simple and user-friendly QR Code Generator built with React. It utilizes React Bootstrap for styling and react-qr-code for generating QR codes.
+**[Open the live demo](https://qr-code-react-gilt.vercel.app/)**
 
-## Features 🌟
+![QR Craft — redesigned desktop interface](docs/screenshots/qr-craft-desktop.jpg)
 
-- **Simple UI**: Easy-to-use interface, built with React Bootstrap.
-- **Real-time QR Code Generation**: Instantly generates QR codes as you type.
-- **Responsive Design**: Looks great on both desktop and mobile devices.
+## Features
 
-## Getting Started 🚀
+- **Live generation** — the QR code updates as you type.
+- **PNG download** — crisp, integer-scaled modules on a white background, with a four-module quiet zone for scanning.
+- **Simple controls** — try an example or reset your content in one click.
+- **Private by design** — QR content is processed locally in your browser; it is not sent to a QR generation service.
+- **Responsive layout** — a full-height desktop workspace and a stacked layout on smaller screens.
+- **Accessible controls** — labelled inputs, visible keyboard focus, download states, and input feedback.
 
-To run this app locally, follow these steps:
+Static QR codes have no built-in expiry. A linked website can still change or become unavailable. The app limits content to 1,000 UTF-8 bytes to keep codes manageable.
 
-1. Clone the repository:
+## Tech stack
 
+| Purpose | Library |
+| --- | --- |
+| Interface | React 18 |
+| Layout and components | Bootstrap 5, React Bootstrap |
+| QR generation | react-qr-code |
+| Icons | Font Awesome |
+| Development and build | Vite 5 |
+
+No backend, database, or account is required. Fonts load from Google Fonts; system fonts are used as a fallback.
+
+## Run locally
+
+Use **Node.js 22.x** and npm.
+
+```bash
 git clone https://github.com/Gitzak/qr-code-react.git
-
-2. Install the dependencies:
-
-npm install
-
-3. Start the development server:
-
+cd qr-code-react
+npm ci
 npm run dev
+```
 
-## Usage 💡
+## Commands
 
-Simply enter the text or URL you wish to encode in the input field, and the app will generate a QR code for you. You can then download or scan the code with any QR code reader.
+```bash
+npm run dev      # Start the development server
+npm run build    # Create the production build in dist/
+npm run preview  # Preview the production build
+npm run lint     # Check JavaScript and JSX
+```
 
-## Contributing 👨‍💻
+## How to use
 
-Contributions are what make the open-source community such a fantastic place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+1. Enter a website address or text in **Link or text**.
+2. Check the live preview.
+3. Select **Download QR code** to save your PNG.
+4. Scan the exported image with your phone before sharing or printing it.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Use **Try an example** to explore, or **Reset** to clear the editor. Download is disabled while the input is empty or exceeds the content limit.
 
-## License 📄
+## Project structure
 
-Distributed under the MIT License. See `LICENSE` for more information.
+```text
+src/
+  App.jsx
+  main.jsx
+  styles.css
+  components/
+    Navigation/Navigation.jsx
+    QrCodeCmp/QrCodeCmp.jsx
+    Footer/Footer.jsx
+public/
+  favicon.svg
+docs/
+  screenshots/qr-craft-desktop.jpg
+```
 
-## Contact 📧
+## Author
 
-GitZak - [@zakaria-belrhali](https://www.linkedin.com/in/zakaria-belrhali/)
+Built by [Zakaria Belrhali](https://github.com/Gitzak).
 
-Demo Project Link: [https://qr-code-react-gilt.vercel.app/](https://qr-code-react-gilt.vercel.app/)
-
----
-
-Enjoy your QR Code Generator!
+Ideas and improvements are welcome through [GitHub Issues](https://github.com/Gitzak/qr-code-react/issues).
