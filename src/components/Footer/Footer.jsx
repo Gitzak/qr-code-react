@@ -1,21 +1,10 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBootstrap, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faQrcode } from "@fortawesome/free-solid-svg-icons";
 
-export const Footer = () => {
-  return (
-    <footer className="footer mt-auto py-3 bg-light">
-      <Container>
-        <Row className="justify-content-center">
-          <Col className="d-flex justify-content-around">
-            <FontAwesomeIcon icon={faReact} size="3x" />
-            <FontAwesomeIcon icon={faBootstrap} size="3x" />
-            <FontAwesomeIcon icon={faQrcode} size="3x" />
-          </Col>
-        </Row>
-      </Container>
-    </footer>
-  );
-};
+export const Footer = () => <footer className="app-footer">
+  <Container className="d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span>Made by <a href="https://github.com/Gitzak" target="_blank" rel="noreferrer">Zakaria Belrhali</a></span>
+    <span className="stack-label"><FontAwesomeIcon icon={faReact} /> React <span className="footer-dot">·</span> <FontAwesomeIcon icon={faBootstrap} /> Bootstrap <span className="footer-dot">·</span> react-qr-code</span>
+  </Container>
+</footer>;

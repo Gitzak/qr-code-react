@@ -1,24 +1,19 @@
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Container, Navbar } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare, faQrcode } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = () => {
-  return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="/">Online QR Code Generator</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link target="_blank" href="https://github.com/Gitzak/qr-code-react"><FontAwesomeIcon className="me-2" icon={faGithub} /> Github Repo</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-};
-
-export default Navigation;
+export default function Navigation() {
+  return <Navbar className="app-nav">
+    <Container className="d-flex justify-content-between">
+      <Navbar.Brand href="/" className="brand d-flex align-items-center gap-2">
+        <span className="brand-icon"><FontAwesomeIcon icon={faQrcode} /></span>
+        qr<span className="brand-light">craft</span><span className="brand-dot">.</span>
+      </Navbar.Brand>
+      <a className="repo-link" href="https://github.com/Gitzak/qr-code-react" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={faGithub} /> <span>View on GitHub</span>
+        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="external-icon" />
+      </a>
+    </Container>
+  </Navbar>;
+}

@@ -1,18 +1,12 @@
-import React from "react";
 import Navigation from "./components/Navigation/Navigation";
 import { Footer } from "./components/Footer/Footer";
 import { QrCodeCmp } from "./components/QrCodeCmp/QrCodeCmp";
+import "./styles.css";
 
-function App() {
-  return (
-    <>
-      <div className="d-flex flex-column vh-100">
-        <Navigation />
-        <QrCodeCmp />
-        <Footer />
-      </div>
-    </>
-  );
+export default function App() {
+  return <div className="app-shell d-flex flex-column">
+    <Navigation />
+    <QrCodeCmp />
+    <Footer />
+  </div>;
 }
-
-export default App;
