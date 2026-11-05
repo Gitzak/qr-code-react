@@ -66,7 +66,7 @@ export const QrCodeCmp = () => {
       <section className="generator-card" aria-label="QR code generator">
         <Row className="g-0">
           <Col lg={7} className="editor-panel">
-            <div className="step-label"><span>01</span> YOUR CONTENT</div>
+            <div className="step-label">YOUR CONTENT</div>
             <h2>Where will your code lead?</h2>
             <p className="panel-description">Add a website, a message, or anything worth sharing.</p>
             <Form onSubmit={(event) => event.preventDefault()}>
@@ -94,7 +94,7 @@ export const QrCodeCmp = () => {
             </div>
           </Col>
           <Col lg={5} className="preview-panel">
-            <div className="preview-heading"><span className="step-label"><span>02</span> LIVE PREVIEW</span>
+            <div className="preview-heading"><span className="step-label">LIVE PREVIEW</span>
               <span className="live-badge"><span className="status-dot" /> {ready ? "Ready" : "Preview"}</span>
             </div>
             <div className={"qr-frame" + (ready ? "" : " is-placeholder")} ref={qrRef}>
