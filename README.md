@@ -4,7 +4,7 @@ A clean, single-page QR code generator built with **React**, **Bootstrap**, and 
 
 **[Open the live demo](https://qr-code-react-gilt.vercel.app/)**
 
-![QR Craft — redesigned desktop interface](docs/screenshots/qr-craft-desktop.jpg)
+![QR Craft — redesigned desktop interface](docs/screenshots/qr-craft-latest-ui.jpg)
 
 ## Features
 
@@ -72,7 +72,7 @@ src/
 public/
   favicon.svg
 docs/
-  screenshots/qr-craft-desktop.jpg
+  screenshots/qr-craft-latest-ui.jpg
 ```
 
 ## Author
